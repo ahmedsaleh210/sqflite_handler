@@ -105,6 +105,7 @@ class _UsersScreenState extends State<UsersScreen> {
                                       email: emailController.text);
                                   database.insertToDatabase(user).then((value) {
                                     getUsers();
+                                    Navigator.pop(context);
                                     log('$value');
                                   });
                                 },
